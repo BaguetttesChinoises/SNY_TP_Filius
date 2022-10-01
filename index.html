@@ -1,0 +1,198 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id=""
+                  title=""
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Création de réseaux avec Filius" duration="0">
+        <h2 is-upgraded><strong>Présentation</strong></h2>
+<p>Nous allons utiliser le logiciel Filius qui permet de construire &#34;virtuellement&#34; des réseaux. Filius</p>
+<p>est un logiciel libre et gratuit, multiplateforme.</p>
+<h2 is-upgraded><strong>Installation de Filius</strong></h2>
+<ol type="1" start="1">
+<li>Télécharger Filius : <a href="https://www.lernsoftware-filius.de/downloads/Setup/Filius-Setup_with-JRE-2.0.1.exe" target="_blank">https://www.lernsoftware-filius.de/downloads/Setup/Filius-Setup_with-JRE-2.0.1.exe</a></li>
+<li>Exécuter le fichier &#34;Filius-Setup_with-JRE-2.0.1.exe&#34;</li>
+<li>Affecter les même opérations que dans la vidéo ci-dessous:</li>
+</ol>
+<iframe class="youtube-video" src="https://www.youtube.com/embed/UxgbJ5GRP_E?rel=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<ol type="1" start="4">
+<li>Sur le bureau, ouvrir le dossier &#34;Filius&#34; puis éxécuter le fichier Filius.exe</li>
+</ol>
+<p class="image-container"><img style="width: 470.00px" src="img\\8ad0d198f72f6795.png"></p>
+<aside class="warning"><p>Si vous avez mal sélectionné la langue française lors du premier lancement, il vous faudra supprimer le dossier .filius contenant les paramètres de langues ; ce dossier se trouvant dans</p>
+<p>C:\Users\ &lt;nom d&#39;utilisateur sur le réseau &gt;\.filius. </p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Un premier réseau" duration="0">
+        <p>Pour ajouter des éléments dans votre réseau &#34;cliquer-déposer&#34;  sur les équipements de gauche.</p>
+<ol type="1" start="1">
+<li>Créer le réseau ci-dessous :</li>
+</ol>
+<p class="image-container"><img style="width: 431.00px" src="img\\806672c52929039f.png"></p>
+<p>Un Switch est un équipement qui permet de connecter plusieurs machines dans un même réseau.</p>
+<ol type="1" start="1">
+<li>Faire un double-clic sur chaque poste pour le renommer et paramétrer son adresse IP. </li>
+<li>Pour M1, donner l&#39;adresse IP 192.168.1.1 et pour M2 l&#39;adresse IP 192.168.1.2 (Laisser le masque sous-réseau à 255.255.255.0)</li>
+<li>Rendu TP : Faire une capture d&#39;écran de votre réseau et la coller dans le document de rendu</li>
+<li>Nous pouvons alors passer en mode simulation pour vérifier que nos 2 machines peuvent communiquer. Il suffit de cliquer sur le triangle vert.</li>
+</ol>
+<p class="image-container"><img style="width: 570.00px" src="img\\dd01ac91ac24b4f3.png"></p>
+<ol type="1" start="5">
+<li>Cliquer alors sur M1, une nouvelle fenêtre va s&#39;ouvrir avec une icône qui permet d&#39;installer des logiciels dans nos machines (donc dans ce cas dans la machine M1)</li>
+</ol>
+<p class="image-container"><img style="width: 205.00px" src="img\\1dcedce4c990b43c.png"></p>
+<ol type="1" start="6">
+<li>Installer alors &#34;ligne de commande&#34; (le 1er choix) en double-cliquant puis en cliquant sur &#34;Appliquer les modifications&#34;. On a alors accès à une console pour la machine M1 :</li>
+</ol>
+<p class="image-container"><img style="width: 469.00px" src="img\\2e1a0372f605e3bd.png"></p>
+<ol type="1" start="7">
+<li>Lancer cette console, vous pouvez voir afficher les différentes commandes acceptées par cette console.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Lignes de commandes" duration="0">
+        <p>Les<strong> lignes de commandes </strong>présentées sont<strong> à connaître par cœur</strong>. Elles peuvent être demandées lors d&#39;une évaluation.</p>
+<ol type="1" start="1">
+<li>Lancer la ligne de commande de la machine M1</li>
+</ol>
+<p class="image-container"><img style="width: 616.00px" src="img\\b326e4378ad2e95.png"></p>
+<h2 is-upgraded><strong>La commande ipconfig</strong></h2>
+<p>Définition : ipconfig permet de connaître l&#39;adresse IP de la machine.</p>
+<ol type="1" start="2">
+<li>Taper la commande ipconfig. </li>
+</ol>
+<p class="image-container"><img style="width: 372.00px" src="img\\db80572b6c7f3c04.png"></p>
+<h2 is-upgraded><strong>La commande ping</strong></h2>
+<p>Définition : ping permet de savoir si une machine est joignable dans un réseau en envoyant des paquets vers celle-ci (4 par défaut). ping affiche aussi le temps mis pour recevoir une réponse et indique qu&#39;un paquet est perdu en cas de non-réponse</p>
+<ol type="1" start="3">
+<li>Faire un ping vers la machine M2 en tapant : ping 192.169.1.2 (qui est l&#39;adresse IP de M2)</li>
+</ol>
+<p class="image-container"><img style="width: 604.00px" src="img\\1232b6a6b73f46bd.png"></p>
+<ol type="1" start="4">
+<li>Est-ce que la connexion entre les machines M1 et M2 fonctionne ? Expliquer votre réponse.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Un réseau de 4 machines" duration="0">
+        <ol type="1" start="1">
+<li>Repasser en mode conception (icône marteau).</li>
+<li>Créer un réseau avec 4 machines M1, M2, M3 et M4.</li>
+</ol>
+<p>M1 → IP : 192.168.1.1</p>
+<p>M2 → IP : 192.168.1.2</p>
+<p>M3 → IP : 192.168.1.3</p>
+<p>M4 → IP : 192.168.2.1</p>
+<p>Laisser le masque sous réseau à 255.255.255.0</p>
+<ol type="1" start="3">
+<li>Rendu TP : Faire une capture d&#39;écran de votre réseau et la coller dans le document de rendu</li>
+<li>Passer en mode simulation</li>
+<li>Sur la machine M1, que faut-il saisir dans la console pour vérifier qu&#39;il peut joindre M3 ?</li>
+<li>Faire un ping sur la machine M4, quel est le résultat de ce ping ? À votre avis, pourquoi ?</li>
+</ol>
+<h2 is-upgraded><strong>A retenir</strong></h2>
+<p>Une <strong>adresse IP</strong> est constituée de <strong>deux parties</strong> : l&#39;<strong>adresse du réseau</strong> et l&#39;<strong>adresse de la machine </strong>qui permet donc de distinguer une machine sur un réseau.</p>
+<p>Deux machines se trouvant sur un même réseau possèdent la même adresse réseau mais pas la même adresse machine.</p>
+<p>Dans notre cas :</p>
+<p>Le masque sous réseau 255.255.255.0 indique que les trois premiers nombres sont utilisés pour l&#39;adresse réseau et le dernier nombre pour l&#39;adresse machine.</p>
+<p>Les machines M1, M2 et M3 sont dans le réseau dont l&#39;adresse est : 192.168.1.0</p>
+<p>M4 est dans le réseau dont l&#39;adresse est : 192.168.2.0</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Un &#34;mini&#34; internet : deux réseaux de 3 machines." duration="0">
+        <ol type="1" start="1">
+<li>Construire 2 réseaux de 3 machines.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\\d4588227793d0841.png"></p>
+<p>Le réseau des machines M1, M2, M3 a pour adresse 192.168.1.0.</p>
+<p>Le réseau des machines M4, M5, M6 a pour adresse 192.168.2.0.</p>
+<p><strong>Pour relier les 2 réseaux, il faut ajouter un routeur (avec au moins 2 interfaces réseaux puisqu&#39;il y a 2 réseaux).</strong></p>
+<p>Définition : Un routeur est un équipement qui permet de relier différents réseaux entres eux</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\a6f1f9145b51911f.png"></p>
+<ol type="1" start="2">
+<li>Rendu TP : Faire une capture d&#39;écran de votre réseau et la coller dans le document de rendu</li>
+</ol>
+<p>Il faut maintenant paramétrer les deux interfaces du routeur. La première interface doit correspondre au premier réseau et l&#39;autre au deuxième réseau. </p>
+<p>Par convention, on a tendance à affecter au routeur une adresse en fin de plage IP. Par exemple, sur le réseau 192.168.1.0/24, on gardera souvent l&#39;adresse IP 192.168.1.254 pour le routeur. </p>
+<ol type="1" start="3">
+<li>Paramétrer le routeur comme ci-dessous : </li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\\36d5121a059e6f52.png"></p>
+<ol type="1" start="4">
+<li>Dans l&#39;onglet Général, cocher Routage automatique pour que le routeur gère automatiquement les tables de routage.</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\\9e9b3688a0cab2c9.png"></p>
+<h2 is-upgraded><strong>Les passerelles</strong></h2>
+<p>Il faut maintenant ajouter l&#39;adresse IP du routeur dans le champ Passerelle (Gateway en anglais) de chaque machine de chaque réseau.</p>
+<p>Quand un ordinateur tente de communiquer avec un autre périphérique via le protocole TCP/IP, il détermine si la machine de destination appartient au même réseau ou pas.</p>
+<ul>
+<li>Si la machine est dans le réseau local alors l&#39;ordinateur envoie le paquet sur le réseau local en transitant par le switch</li>
+<li>Si la machine n&#39;est pas dans le réseau local alors l&#39;ordinateur transmet le paquet à la passerelle (le routeur) définie dans ses propriétés TCP/IP.</li>
+</ul>
+<ol type="1" start="5">
+<li>Cliquer sur chaque machine et paramétrer le champ &#34;passerelle&#34;</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\\f0691a3da160361.png"></p>
+<ol type="1" start="6">
+<li>Une fois que tout est bien complété, passez en mode simulation.</li>
+<li>Installer une console sur M1, M3 et M5.</li>
+<li>Depuis M1, faites un ping sur M3, puis sur M5.</li>
+<li>Rendu TP : Faire une capture d&#39;écran de votre ligne de commande </li>
+<li>Depuis M5 faites un ping sur M4 puis sur M1</li>
+<li>Rendu TP : Faire une capture d&#39;écran de votre ligne de commande </li>
+</ol>
+<p>Si tout a bien été configuré, vous devez constater que les machines des 2 réseaux peuvent communiquer entre-elles aussi bien dans le réseau local qu&#39;entre les 2 réseaux.</p>
+<h2 is-upgraded><strong>La commande traceroute</strong></h2>
+<p>Définition : La commande traceroute permet d&#39;obtenir le chemin parcouru pour arriver jusqu&#39;à une machine.</p>
+<ol type="1" start="12">
+<li>Depuis le terminal de M1 faire la commande suivante :</li>
+</ol>
+<p class="image-container"><img style="width: 624.00px" src="img\\45516d174424a95a.png"></p>
+<ol type="1" start="13">
+<li>Quel est le chemin parcouru ?</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
